@@ -210,22 +210,22 @@ shift
 # -- Tests -----------------------------------------------------------
 # --------------------------------------------------------------------
 
-executable_file "$letsencrypt" || {
+executable_file "$letsencrypt" "" || {
     error "Letsencrypt tool '$letsencrypt' isn't executable file."
     exit 2
 }
 
-executable_file "$zmcertmgr" || {
+executable_file "$zmcertmgr" "" || {
     error "Zimbra cert. manager '$zmcertmgr' isn't executable file."
     exit 2
 }
 
-readable_file "$zimbra_key" || {
+readable_file "$zimbra_key" "" || {
     error "Private key '$zimbra_key' isn't readable file."
     exit 2
 }
 
-readable_file "$root_CA_file" || {
+readable_file "$root_CA_file" "" || {
     error "The root CA certificate '$root_CA_file' isn't readable file."
     exit 2
 }
