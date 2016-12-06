@@ -328,7 +328,7 @@ readable_file "$intermediate_CA_file" "$zimbra_user" || {
 }
 
 # create one CA chain file
-cat "$root_CA_file" "$intermediate_CA_file" > "$chain_file"
+cat "$intermediate_CA_file" "$root_CA_file" > "$chain_file"
 
 # verify it with Zimbra tool
 su -c \
